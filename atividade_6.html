@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        <button id="gerarNome">Gerar Nome de Aventura</button>
+    <h1 id="nomeAventura"></h1>
+    
+    <script>
+        let botaoGerar = document.querySelector("#gerarNome")
+        let nomeTitulo = document.querySelector("#nomeAventura")
+        
+        const titles = ["Sr.", "Mister", "Dom", "Lord", "Lady", "Capitão", "Dama"];
+        const names = ["Arthur", "Gwendolyn", "Merlin", "Lancelot", "Morgana", "Ragnar", "Éowyn"];
+        const classes = ["Mago", "Paladino", "Arqueiro", "Ladino", "Bárbaro", "Feiticeiro", "Cavaleiro"];
+        const locations = ["Valfenda", "Gondor", "Asgard", "Camelot", "Nárnia", "Babilônia", "Atlantis"];
+        
+        botaoGerar.addEventListener("click", () => {
+            let title = titles[Math.floor(Math.random() * titles.length)]
+            let name = names[Math.floor(Math.random() * titles.length)]
+            let classe = classes[Math.floor(Math.random() * titles.length)]
+            let local = locations[Math.floor(Math.random() * titles.length)]
+            
+            nomeAventura.innerText = title + " " + name + ", " + classe + " de " + local
+        })
+    
+    </script>
+
+</body>
+</html>

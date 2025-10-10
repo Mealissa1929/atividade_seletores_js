@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .modo-escuro {
+            background-color: rgb(42, 41, 46);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <input id="campo" type="text">
+    <h1 id="resposta"></h1>
+    <button id="modo-escuro">Alterar Tema</button>
+    
+    <script>
+        let digitador = document.querySelector("#campo")
+        let resposta = document.querySelector("#resposta")
+        let botaoTema = document.querySelector("#modo-escuro")
+        let body = document.querySelector("body")
+        
+        digitador.addEventListener("input", () => {
+            let input = campo.value
+            
+            if(input.length > 3){
+                if(input == "chocolate"){
+                    resposta.innerText = "Eu amo sorvete de chocolate!"
+                }else if(input == "flocos"){
+                    resposta.innerText = "Ahh, mas chocolate é o meu favorito..."
+                }else{
+                    resposta.innerText = "Ahh, eu esperava um sabor de sorvete..."
+                }
+            }else{
+                resposta.innerText = ""
+            }
+        })
+        
+        botaoTema.addEventListener("click", () => {
+            body.classList.toggle('modo-escuro')
+        })
+    </script>
+</body>
+</html>

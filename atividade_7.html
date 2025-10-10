@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <img id="porquinho" src="https://pm1.aminoapps.com/6421/8d77a3f86b262172fccfaccd942798289d6075a3_hq.jpg" alt="">
+    <h1 id="resposta"></h1>
+    
+    <script>
+        let personagem = document.querySelector("#porquinho")
+        let resposta = document.querySelector("#resposta")
+        
+        personagem.addEventListener("click", () => {
+            resposta.innerText = "Não clique em mim"
+        })
+        
+        personagem.addEventListener("mouseleave", () => {
+            resposta.innerText = "Não, volte!"
+        })
+        
+        personagem.addEventListener("mousemove", () => {
+            resposta.innerText = "Carinho!"
+        })
+
+        personagem.addEventListener("mouseenter", () => {
+            resposta.innerText = "Vocẽ voltou!"
+        })
+    </script>
+</body>
+</html>

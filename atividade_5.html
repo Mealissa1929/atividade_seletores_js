@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <li id="list"></li>
+    
+    <button id="button">Adicionar Elemento</button>
+    
+    <script>
+        let lista = document.querySelector("#list")
+        let botao = document.querySelector("#button")
+        
+        let numero = 1
+        
+        botao.addEventListener("click", () => {
+            let elemento = document.createElement("ul")
+            elemento.innerText = "Item n° " + numero
+            numero++
+            
+            lista.appendChild(elemento)
+        })
+    </script>
+</body>
+</html>
