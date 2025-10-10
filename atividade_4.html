@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ 
+        <button id="button">Contar</button>
+
+        <h1 id="contador">0</h1>
+
+    
+
+        <button id ="recomecar">recomeçar</button>
+
+
+    <script>
+        let botao = document.querySelector("#button")
+        let botaoResetar = document.querySelector("#recomecar")
+        let clicks = 1
+        let contador = document.querySelector("#contador")
+
+            botao.addEventListener("click", () => {
+                contador.innerText = clicks++
+            })
+            
+            botaoResetar.addEventListener("click", () => {
+                contador.innerText = 0
+                clicks = 1
+            })
+    </script>
+
+
+</body>
+</html>
